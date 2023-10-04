@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+/* import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -22,4 +22,17 @@ function App() {
   );
 }
 
-export default App;
+export default App; */
+import React from 'react'
+import Dashboard from './Pages/dashboard'
+
+
+export default function App() {
+  return (
+    <div>
+     <Dashboard/> 
+     
+      
+    </div>
+  )
+}
