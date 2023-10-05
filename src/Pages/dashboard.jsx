@@ -27,7 +27,7 @@ export default function Dashboard() {
         <aside
           style={{
             width: "272px",
-            height: "900px",
+            height: "100vh",
             backgroundColor: "#33074F",
           }}
           id="logo-sidebar"
@@ -72,17 +72,17 @@ export default function Dashboard() {
             {/* ... Your content ... */}
             <Hero />
 
-            <div className=" grid grid-cols-2 mt-10 gap-36">
+            <div className=" grid grid-cols-2 mt-10 lg:gap-36 ">
               <div>
-                {" "}
+               
                 <Todo />
               </div>
 
-              <div className=" mx-auto grid grid-cols-1 grid-rows-2">
-                <div>
+              <div className=" lg:mx-auto grid grid-cols-1 grid-rows-2 lg:ml-10 ">
+                <div className="">
                   <Activity />
                 </div>
-                <div className=" mt-8">
+                <div className=" lg:mt-8">
                   <Prior />
                 </div>
               </div>
@@ -92,16 +92,16 @@ export default function Dashboard() {
             <nav
               style={{
                 minWidth: "320px",
-                maxWidth: "1168px",
+                maxWidth: "calc(100% - 272px)",
                 maxHeight: "80px",
               }}
-              className={`fixed top-0 mx-auto z-50 sm:w-3/4 lg:max-w-screen-2xl bg-white border-b border-gray-200 shadow-md p-4${
+              className={`fixed top-0 mx-auto z-50 sm:w-screen md:w-screen lg:pr-8 lg:w-screen lg:mr-8 bg-white border-b border-gray-200 shadow-md${
                 sidebarOpen ? "lg:pl-3" : "lg:px-5"
               }`}
             >
               <div className="px-2 py-6 lg:px-5 lg:pl-3">
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center justify-start sm:mt-24 lg:mt-0">
+                  <div className="flex items-center justify-start sm:mt-24 lg:mt-0 ">
                     <button
                       onClick={toggleSidebar}
                       data-drawer-target="logo-sidebar"
@@ -136,7 +136,7 @@ export default function Dashboard() {
 
                   <div className="flex items-center justify-end">
                     <div className="flex items-center ml-3 gap-7">
-                      <img src={Not} className=" flex w-6 h-6 " alt="logo" />
+                      <img src={Not} className=" flex w-6 h-6" alt="logo" />
                       <div>
                         <button
                           onClick={toggleUserMenu}
@@ -155,12 +155,12 @@ export default function Dashboard() {
                         </button>
                       </div>
                       <div
-                        className={`z-50 absolute top-full right-0 mt-2 text-base list-none bg-white divide-y divide-gray-100 ${
+                        className={`z-50 absolute top-full right-0 mt-2 text-base list-none bg-white divide-y divide-gray-100 pr-14 ${
                           userMenuOpen ? "block" : "hidden"
                         }`}
                         id="dropdown-user"
                       >
-                        <div className="px-4 py-3" role="none">
+                        <div className="px-4 py-3 pr-4" role="none">
                           <p
                             className="text-sm text-gray-900 dark:text-white"
                             role="none"
