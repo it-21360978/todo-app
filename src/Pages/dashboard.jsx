@@ -74,7 +74,6 @@ export default function Dashboard() {
 
             <div className=" grid grid-cols-2 mt-10 lg:gap-36 ">
               <div>
-               
                 <Todo />
               </div>
 
